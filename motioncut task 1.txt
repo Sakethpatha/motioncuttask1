@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Search Bar with Dropdown</title>
+  <style>
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      background-color: #87CEEB;
+    }
+
+    .search-bar {
+      display: flex;
+      align-items: center;
+      background-color: white;
+      border-radius: 4px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      padding: 8px 12px;
+      width: 80%;
+      max-width: 600px;
+    }
+
+    .dropdown-btn {
+      background-color: #a51b4d;
+      color: white;
+      border: none;
+      padding: 8px 12px;
+      font-size: 16px;
+      cursor: pointer;
+      margin-right: 12px;
+    }
+
+    .search-input {
+      flex: 1;
+      border: none;
+      font-size: 16px;
+      padding: 8px 0;
+    }
+
+    .search-btn {
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+      margin-left: 12px;
+    }
+
+    .search-btn svg {
+      width: 20px;
+      height: 20px;
+    }
+
+    .dropdown-menu {
+      display: none;
+      background-color: white;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      padding: 8px 0;
+      border-radius: 4px;
+      margin-top: 8px;
+      width: 80%;
+      max-width: 600px;
+      position: absolute;
+    }
+
+    .dropdown-menu a {
+      display: block;
+      padding: 8px 12px;
+      text-decoration: none;
+      color: #333;
+      transition: background-color 0.3s;
+    }
+
+    .dropdown-menu a:hover {
+      background-color: #f5f5f5;
+    }
+
+    .search-bar:focus-within .dropdown-menu,
+    .dropdown-menu:hover {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="search-bar">
+      <button class="dropdown-btn">Everything▾</button>
+      <input type="text" class="search-input" placeholder="Search Anything" />
+      <button class="search-btn">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search">
+          <circle cx="11" cy="11" r="8"></circle>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        </svg>
+      </button>
+    </div>
+    <div class="dropdown-menu">
+      <a href="#">Everything</a>
+      <a href="#">Software development</a>
+      <a href="#">Web development</a>
+      <a href="#">Data Analyst</a>
+      <a href="#">IT Consultant</a>
+      <a href="#">Network administrator</a>
+    </div>
+  </div>
+</body>
+</html>
